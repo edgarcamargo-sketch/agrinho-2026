@@ -1,0 +1,15 @@
+<header>
+  <h1>Rastreador "Do Campo à Mesa"</h1>
+</header>
+<main>
+  <section id="input-section">
+    <input type="text" id="product-code" placeholder="Digite o código do alimento">
+    <button id="track-btn">Rastrear</button>
+  </section>
+  <section id="timeline">
+    <!-- Cards gerados dinamicamente pelo JS -->
+  </section>
+</main>
+<footer>
+  <p>Projeto Educativo Agrinho 2026</p>
+</footer>
