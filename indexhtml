@@ -1,15 +1,65 @@
-<header>
-  <h1>Rastreador "Do Campo à Mesa"</h1>
-</header>
-<main>
-  <section id="input-section">
-    <input type="text" id="product-code" placeholder="Digite o código do alimento">
-    <button id="track-btn">Rastrear</button>
-  </section>
-  <section id="timeline">
-    <!-- Cards gerados dinamicamente pelo JS -->
-  </section>
-</main>
-<footer>
-  <p>Projeto Educativo Agrinho 2026</p>
-</footer>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoSolo - Painel de Compostagem Sustentável</title>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <div class="logo-area">
+                <span class="logo-text">🌱 EcoSolo</span>
+            </div>
+            <nav>
+                <h1 class="main-title">Agro Forte, Futuro Sustentável</h1>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="intro-section">
+            <div id="mensagem-boas-vindas" class="alert-box">
+                Carregando painel de sustentabilidade...
+            </div>
+            <h2>Equilíbrio entre Production e Meio Ambiente</h2>
+            <p>A compostagem reduz o desperdício e transforma resíduos em ouro para o solo. Utilize nossa calculadora para encontrar a proporção ideal entre Nitrogênio (Verdes) e Carbono (Castanhos).</p>
+        </section>
+
+        <section class="calc-section">
+            <form id="form-compostagem" onsubmit="return false;">
+                <h3>Calculadora de Proporção Ideal</h3>
+                
+                <div class="form-group">
+                    <label for="residuos-verdes">Resíduos Verdes / Ricos em Nitrogênio (kg):</label>
+                    <small>Ex: Restos de alimentos, cascas de frutas, grama verde.</small>
+                    <input type="number" id="residuos-verdes" min="0" step="0.1" placeholder="Ex: 1.5" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="residuos-castanhos">Resíduos Castanhos / Ricos em Carbono (kg):</label>
+                    <small>Ex: Folhas secas, serragem, papel picado.</small>
+                    <input type="number" id="residuos-castanhos" min="0" step="0.1" placeholder="Ex: 3.0" required>
+                </div>
+
+                <button type="button" id="btn-calcular">Calcular Equilíbrio</button>
+            </form>
+        </section>
+
+        <section id="resultado-section" class="result-section hidden">
+            <h3>Análise do seu Composto</h3>
+            <p id="resultado-texto"></p>
+            <p id="dica-sustentavel" class="dica-box"></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 - Projeto Agrinho. Desenvolvido de forma autoral para um futuro mais sustentável.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
